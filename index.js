@@ -12,7 +12,11 @@ const path = require("path");
 const port = process.env.PORT || 9000;
 dotenv.config();
 
-app.use(cors());
+app.use(cors(
+  {
+    origin: "*",
+  }
+));
 app.use(express.json());
 
 
